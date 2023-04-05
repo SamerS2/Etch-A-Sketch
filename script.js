@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //function to generate size of grid
     createGrid(defaultSize);
 
+    //enables / disables drawing on mouse click
     document.querySelector("body").addEventListener("click", function(e){
         if(e.target.tagname != "BUTTON"){
             click = !click;
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log("Hi");
 })
 
-//function that takes a size variable from user upon button click or a default size of 16
+//function that takes a size variable from user upon "PICK SIZE" button click or a default size of 16
 //upon first load up of page, then generates size of grid by dimensions of size * size
 function createGrid(size){
     let grid = document.querySelector(".box-container");
@@ -56,7 +57,7 @@ function createGrid(size){
 //fuction for the button "pick size" to prompt user to enter a size between 1 and 100
 // to expand or retract size of grid
 function getSize(){
-    let input = prompt("");
+    let input = prompt("Please enter a number between 1 and 100!");
     let message = document.querySelector("#message");
     if(input == ""){
         message.innerHTML = "Please provide a number";
