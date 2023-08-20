@@ -63,7 +63,7 @@ function getSize(){
         message.innerHTML = "Please provide a number";
     }
     else if (input < 0 || input > 100){
-        message.innerHTML = "Please input a number between 1 and 100!";
+        message.innerHTML = "Please input a number between 2 and 100!";
     }
     else {
         return input;
